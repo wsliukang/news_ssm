@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper
+3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- ==================代理方式================= 由mapper标签开始，由/mapper结束，可以把它想成一个空间，是映 
+	射文件 属性namespace：空间名，主要在代理中使用，namespace是唯一的， 是该xml对应的接口全名 这里把mapper标签和接口联系在一起 
+	Mapper目的：为dao接口方法提供sql语句配置 -->
+<mapper namespace="cn.lk.newsssm.dao.NewsDao">
+
+	<insert id="add" parameterType="News">
+		insert into news
+		( title,content,tjdate,cruser,hitnum ) values
+		(#{title},#{content},#{tjdate},#{cruser},#{hitnum})
+	</insert>
+
+	<delete id="delete">
+		delete from news where id= #{id}
+	</delete>
+
+	<update id="update" parameterType="News">
+		update news set
+		title=#{title},content=#{content},cruser=#{cruser},hitnum=#{hitnum}
+		where id=#{id}
+	</update>
+
+	<select id="get" resultType="News">
+		select * from news where id= #{id}
+	</select>
+
+	<select id="list" resultType="News">
+		select * from news order by id desc limit #{offset},#{rows}
+		<!-- <choose>
+			<when test="title != null and title != ''">
+				order by id desc limit ${offset},${rows}
+			</when>
+			<otherwise>
+				title like '%${s1}%' order by id desc limit ${offset},${rows}
+			</otherwise> -->
+		<!-- </choose> -->
+
+	</select>
+
+	<select id="getCount" resultType="int">
+		select count(*) from news
+	</select>
+
+
+
+</mapper>
