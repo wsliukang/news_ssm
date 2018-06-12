@@ -5,4 +5,4 @@
 后端：SSM
 数据库：MySql
 
-![image](https://github.com/wsliukang/dotvim/raw/master/screenshots/vim-screenshot.jpg)
+![image](https://github.com/wsliukang/news_ssm/raw/master/pic/login.png)
