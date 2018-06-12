@@ -9,8 +9,6 @@
 
 ![image](https://github.com/wsliukang/news_ssm/raw/master/pic/command.png)
 
-![image](https://github.com/wsliukang/news_ssm/raw/master/pic/command2.png)
-
 ![image](https://github.com/wsliukang/news_ssm/raw/master/pic/list.png)
 
 ![image](https://github.com/wsliukang/news_ssm/raw/master/pic/read.png)
