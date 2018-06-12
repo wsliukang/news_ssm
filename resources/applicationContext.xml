@@ -15,9 +15,9 @@
 		destroy-method="close">
 		<!-- 配置数据库相关参数properties的属性 -->
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3066/db15436331?serverTimezone=UTC" />
+		<property name="url" value="jdbc:mysql://localhost:3306/dbnews3?serverTimezone=UTC" />
 		<property name="username" value="root" />
-		<property name="password" value="" />
+		<property name="password" value="admin" />
 	</bean>
 
 	<context:annotation-config /> 
